@@ -1,4 +1,4 @@
-class BytePack {
+class BytePack { 
   public:
     int lenght = 2;
     BytePack(byte byte_pack[2]) {
@@ -16,8 +16,8 @@ class BytePack {
 
 };
 
-byte byte_pack[2];
-BytePack txBytePack(byte_pack);
+byte txByte[2];
+BytePack txBytePack(txByte[2]);
 void setup() {
 Serial.begin(115200);
 
