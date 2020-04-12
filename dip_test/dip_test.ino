@@ -1,16 +1,19 @@
 #include "Dip.h"
-#define pin1 3
+#define pin1 3 // номера контактов для dip переключателя
 #define pin2 4
 #define pin3 5
 #define pin4 6
 
-Dip dip(pin1, pin2, pin3, pin4);
+byte addresBoard; // переменная для хранения адреса платы;
+
+Dip dip(pin1, pin2, pin3, pin4); // объект dip класса Dip, передаем значения пинов dip переключателя
+
 void setup() {
-  // put your setup code here, to run once:
+  Serial.begin(9600); // последовательный интерфейс для проверки 
 
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  addresBoard = dip.getAddres(addresBoard); //метод к объекту возвращается адрес платы
+  Serial.println(addresBoard, BIN); // вывод в послед. порт значения адреса в двоичной форме 
 }
