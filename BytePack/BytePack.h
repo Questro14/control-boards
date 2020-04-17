@@ -13,7 +13,8 @@ class BytePack {
   private:
     byte _firstByte;
     byte _secondByte;
-
+    bool _flagSend;
+    byte _addresPack;
 };
 
 #endif

@@ -1,7 +1,7 @@
 #include "BytePack.h"
 byte firstByte;
 byte secondByte;
-
+byte addres = 0x01;
 BytePack pack(firstByte, secondByte);
 
 void setup() {
@@ -10,7 +10,7 @@ void setup() {
 }
 
 void loop() {
-  if (!pack.readPack()) {
+  if (!pack.readPack() and !(pack.addresCheck(addres))) {
     pack.sendNextBoard();
   }
 }
