@@ -4,11 +4,12 @@
 
 class BytePack {
   public:
-
     BytePack(byte firstByte, byte secondByte);
-    bool readPack();
-    void sendNextBoard();
-    bool addresCheck(byte addresBoard);
+    bool readPack(); // чтение данных
+    void sendNextBoard(); // отправить на след. плату
+    bool addresCheck(byte addresBoard); // проверка адреса платы
+    byte numberSwitch(byte secondByte); // номер ключа
+    byte numberChannel(byte secondByte); // номер канала
 
   private:
     byte _firstByte;
