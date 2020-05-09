@@ -28,7 +28,7 @@ bool BytePack::addresCheck(byte addresBoard) {
 
 void BytePack::sendNextBoard() {
   if (_flagSend) {
-    Serial.print(_firstByte, BIN);
+    Serial.println(_firstByte, BIN);
     Serial.println(_secondByte, BIN);
     _flagSend = 0;
   }
